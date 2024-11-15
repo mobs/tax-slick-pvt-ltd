@@ -32,25 +32,25 @@ const HowItWorks = () => {
     ];
 
     return (
-        <section id="howitworks" className="py-20 px-4 md:px-8 lg:px-16 bg-white">
+        <section id="howitworks" className="py-12 md:py-20 px-4 md:px-8 lg:px-16 bg-white">
             <div className="max-w-7xl mx-auto">
-                <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
+                <div className="text-center mb-8 md:mb-16">
+                    <h2 className="text-2xl md:text-4xl font-bold text-slate-800 mb-3 md:mb-4">
                         How It Works
                     </h2>
-                    <p className="text-slate-600 max-w-2xl mx-auto">
+                    <p className="text-sm md:text-base text-slate-600 max-w-2xl mx-auto">
                         Simple steps to register your company with our expert guidance
                     </p>
                 </div>
 
-                <div className="grid md:grid-cols-3 gap-8 mb-16">
+                <div className="grid md:grid-cols-3 gap-6 md:gap-8 mb-8 md:mb-16">
                     {steps.map((step, index) => (
                         <div 
                             key={index} 
-                            className={`${step.bgColor} rounded-2xl overflow-hidden hover:shadow-lg 
+                            className={`${step.bgColor} rounded-xl md:rounded-2xl overflow-hidden hover:shadow-lg 
                                 transition-all duration-300 hover:-translate-y-1 group`}
                         >
-                            <div className="h-72 overflow-hidden object-cover">
+                            <div className="h-48 md:h-72 overflow-hidden object-cover">
                                 <img 
                                     src={step.image} 
                                     alt={step.title}
@@ -58,14 +58,14 @@ const HowItWorks = () => {
                                 />
                             </div>
                             
-                            <div className={`p-6 border-l-4 ${step.borderColor}`}>
-                                <div className="flex items-center gap-3 mb-4">
+                            <div className={`p-4 md:p-6 border-l-4 ${step.borderColor}`}>
+                                <div className="flex items-center gap-2 md:gap-3 mb-2 md:mb-4">
                                     {step.icon}
-                                    <h3 className="text-xl font-semibold text-slate-800">
+                                    <h3 className="text-lg md:text-xl font-semibold text-slate-800">
                                         {step.title}
                                     </h3>
                                 </div>
-                                <p className="text-slate-600">
+                                <p className="text-sm md:text-base text-slate-600">
                                     {step.description}
                                 </p>
                             </div>
@@ -74,11 +74,11 @@ const HowItWorks = () => {
                 </div>
 
                 <div className="text-center">
-                    <button className="bg-[#4059AC] text-white font-medium rounded-full px-8 py-4 
-                        inline-flex items-center gap-3 transition-all duration-300 hover:bg-[#A3B1E0] 
-                        hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0">
+                    <button className="bg-[#4059AC] text-white text-sm md:text-base font-medium rounded-full 
+                        px-6 md:px-8 py-3 md:py-4 inline-flex items-center gap-2 md:gap-3 transition-all 
+                        duration-300 hover:bg-[#A3B1E0] hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0">
                         <span>Start My Company Registration Today!</span>
-                        <IoMdArrowForward className="text-xl" />
+                        <IoMdArrowForward className="text-lg md:text-xl" />
                     </button>
                 </div>
             </div>

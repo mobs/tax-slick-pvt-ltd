@@ -17,10 +17,10 @@ const Form = () => {
             </span>
           </div>
 
-          <h3 className="text-2xl font-semibold text-gray-900">
+          {/* <h3 className="text-2xl font-semibold text-gray-900">
             Get Started Today
             <span className="block text-sm font-normal text-gray-500 mt-1">Takes only 2 minutes to fill</span>
-          </h3>
+          </h3> */}
           
           <div className="space-y-6">
             {['Full Name', 'Email Address', 'Phone Number'].map((label, index) => (
@@ -28,7 +28,7 @@ const Form = () => {
                 <input
                   id={label.toLowerCase().replace(' ', '')}
                   type={index === 1 ? 'email' : index === 2 ? 'tel' : 'text'}
-                  className="peer w-full px-4 pt-8 pb-3 rounded-lg border border-gray-200 placeholder-transparent focus:border-[#4059AC] focus:ring-2 focus:ring-[#4059AC]/20 transition-all duration-200"
+                  className="peer w-full px-4 pt-3 pb-3 rounded-lg border border-gray-200 placeholder-transparent focus:border-[#4059AC] focus:ring-2 focus:ring-[#4059AC]/20 transition-all duration-200"
                   placeholder={label}
                 />
                 <label
@@ -43,7 +43,7 @@ const Form = () => {
 
           <button
             type="submit"
-            className="w-full py-4 px-6 rounded-lg bg-[#4059AC] text-white font-semibold hover:bg-[#4059AC]/90 transition-all duration-200 shadow-lg hover:shadow-[#4059AC]/25 hover:-translate-y-0.5 active:translate-y-0 group"
+            className="w-full py-2 px-4 rounded-lg bg-[#4059AC] text-white font-semibold hover:bg-[#4059AC]/90 transition-all duration-200 shadow-lg hover:shadow-[#4059AC]/25 hover:-translate-y-0.5 active:translate-y-0 group"
           >
             Register Now
             <span className="inline-block ml-2 group-hover:translate-x-1 transition-transform duration-200">→</span>
