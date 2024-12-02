@@ -1,8 +1,9 @@
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, useState } from 'react'
 import { RxCross1 } from 'react-icons/rx'
+import Form from '../Form'
 
-export default function ModalComponent({modalText, setOpenModal, openModal, brochure, payment_plan, floor_plan}) {
+export default function ModalComponent({setOpenModal, openModal}) {
   function closeModal() {
     setOpenModal(false)
   }
@@ -34,9 +35,11 @@ export default function ModalComponent({modalText, setOpenModal, openModal, broc
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="mt-20 w-full max-w-md transform overflow-hidden rounded-2xl bg-background text-left align-middle shadow-xl transition-all">
-                <button className='md:ml[23rem] absolute right-0' onClick={closeModal}> <RxCross1 className='text-3xl mr-0 bg-heading text-gradient rounded-full p-2 font-bold'/> </button>
-                  {/* <FormNew setOpenModal={setOpenModal} brochure={brochure} payment_plan={payment_plan} floor_plan={floor_plan} /> */}
+                <Dialog.Panel className="mt-20 w-full md:max-w-lg transform overflow-visible rounded-2xl text-left align-middle shadow-xl transition-all bg-white">
+                  <button className='absolute right-0 top-0 -translate-y-full' onClick={closeModal}>
+                    <RxCross1 className='text-3xl mr-0 bg-heading text-gradient rounded-full p-2 font-bold'/>
+                  </button>
+                  <Form />
                 </Dialog.Panel>
               </Transition.Child>
             </div>

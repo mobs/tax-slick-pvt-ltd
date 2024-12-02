@@ -36,25 +36,16 @@ const Benefits = () => {
     return (
         <section id="benefits" className="py-12 md:py-20 px-4 md:px-8 bg-gradient-to-b from-white to-slate-50/50">
             <div className="max-w-7xl mx-auto">
-                {/* Title Section - Updated mobile spacing */}
-                <div className="flex flex-col lg:flex-row items-center justify-between gap-4 md:gap-8 mb-8 md:mb-16">
-                    <div className="lg:w-1/2 text-center lg:text-left">
-                        <h2 className="text-2xl md:text-4xl font-bold text-slate-800 mb-3 md:mb-4">
-                            Benefits of Registering as a
-                            <span className="text-[#4059AC]"> Private Limited Company</span>
-                        </h2>
-                        <div className="w-20 h-1 bg-[#A3B1E0] mb-4 md:mb-6 mx-auto lg:mx-0"></div>
-                        <p className="text-slate-600 max-w-xl mx-auto lg:mx-0 text-sm md:text-base">
-                            Transform your business journey with these key advantages of registering as a Private Limited Company.
-                        </p>
-                    </div>
-                    <div className="lg:w-1/2 flex justify-center lg:justify-end mt-6 lg:mt-0">
-                        <img 
-                            src="/benefits.png" 
-                            alt="Benefits Illustration" 
-                            className="max-w-[250px] md:max-w-sm w-full object-contain"
-                        />
-                    </div>
+                {/* Title Section - Centered */}
+                <div className="text-center mb-8 md:mb-16">
+                    <h2 className="text-2xl md:text-4xl font-bold text-slate-800 mb-3 md:mb-4">
+                        Benefits of Registering as a
+                        <span className="text-[#4059AC]"> Private Limited Company</span>
+                    </h2>
+                    <div className="w-20 h-1 bg-[#A3B1E0] mb-4 md:mb-6 mx-auto"></div>
+                    <p className="text-slate-600 max-w-xl mx-auto text-sm md:text-base">
+                        Transform your business journey with these key advantages of registering as a Private Limited Company.
+                    </p>
                 </div>
 
                 {/* Benefits Grid - Updated padding and spacing */}

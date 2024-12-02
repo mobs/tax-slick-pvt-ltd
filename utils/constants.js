@@ -28,9 +28,6 @@ export const navbarData = [
     name: "What You Get"
   },
   {
-    name: "Testimonials"
-  },
-  {
     name: "FAQs"
   }
 ];

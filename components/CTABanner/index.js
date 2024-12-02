@@ -1,8 +1,12 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
 import { IoMdArrowForward } from 'react-icons/io'
 import { MdVerified } from 'react-icons/md'
+import ModalComponent from '../Modal'
 
 const CTABanner = () => {
+  const [modalOpen, setModalOpen] = useState(false);
+
   return (
     <div className="relative bg-[#4059AC] py-20 overflow-hidden">
       {/* Animated wave background */}
@@ -36,8 +40,8 @@ const CTABanner = () => {
             <button className="bg-[#A3B1E0] text-white font-medium rounded-full px-10 py-4 
               inline-flex items-center gap-3 transition-all duration-300 
               hover:bg-white hover:text-[#4059AC] hover:shadow-lg 
-              hover:-translate-y-0.5 active:translate-y-0 hover:scale-105 group">
-              <span className="text-lg">Sign Up Now</span>
+              hover:-translate-y-0.5 active:translate-y-0 hover:scale-105 group" onClick={() => setModalOpen(true)} >
+              <span className="text-lg">Connect with Us</span>
               <IoMdArrowForward className="text-xl transition-transform group-hover:translate-x-1" />
             </button>
 
@@ -55,6 +59,9 @@ const CTABanner = () => {
           </div>
         </div>
       </div>
+      {
+        modalOpen && <ModalComponent openModal={modalOpen} setOpenModal={setModalOpen} />
+      }
     </div>
   )
 }

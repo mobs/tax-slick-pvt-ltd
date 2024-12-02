@@ -1,8 +1,11 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
 import { FaIdCard, FaBuilding, FaCamera, FaPiggyBank, FaCoins, FaUsers } from 'react-icons/fa'
 import { IoMdArrowForward } from 'react-icons/io'
+import ModalComponent from '../Modal';
 
 const RequiredDocs = () => {
+    const [modalOpen, setModalOpen] = useState(false);
     const documents = [
         {
             icon: <FaIdCard />,
@@ -105,7 +108,7 @@ const RequiredDocs = () => {
 
                 <div className="mt-8 md:mt-12 flex flex-col items-center gap-4 md:gap-6">
                     <button 
-                        onClick={() => setOpenModal(true)} 
+                        onClick={() => setModalOpen(true)} 
                         className="bg-[#4059AC] text-white text-sm md:text-base font-medium 
                             rounded-full px-6 md:px-8 py-2.5 md:py-3 flex items-center gap-2 md:gap-3 
                             transition-all duration-300 hover:bg-[#A3B1E0] hover:shadow-lg 
@@ -125,6 +128,9 @@ const RequiredDocs = () => {
                     </div>
                 </div>
             </div>
+            {
+                modalOpen && <ModalComponent openModal={modalOpen} setOpenModal={setModalOpen} />
+            }
         </div>
     )
 }

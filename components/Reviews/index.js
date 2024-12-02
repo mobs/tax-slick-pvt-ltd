@@ -5,34 +5,46 @@ import "slick-carousel/slick/slick-theme.css";
 
 const reviewData = [
     {
-        content: "I got my GST registered with TaxSlick, and it was so simple! The team guided me every step of the way.",
-        name: "John Doe",
-        business: "Retail Store"
+        content: "Starting my private limited company was a breeze with their help. They managed everything from paperwork to approvals perfectly.",
+        name: "Dhruv ",
+        business: "Hassle-Free Process!",
+        stars: 5
     },
     {
-        content: "I got my GST registered with TaxSlick, and it was so simple! The team guided me every step of the way.",
-        name: "Jane Smith",
-        business: "E-commerce"
+        content: "The team's expertise was evident throughout the registration process. They guided me every step of the way and made sure nothing was missed.",
+        name: "Zara Merchant",
+        business: "Knowledgeable Professionals",
+        stars: 5
     },
     {
-        content: "I got my GST registered with TaxSlick, and it was so simple! The team guided me every step of the way.",
-        name: "Mike Johnson",
-        business: "Restaurant"
+        content: "My company registration was completed faster than expected, thanks to their efficient handling of the process. Highly impressed!",
+        name: "Kabir Menon",
+        business: "Fast and Efficient",
+        stars: 5
     },
     {
-        content: "I got my GST registered with TaxSlick, and it was so simple! The team guided me every step of the way.",
-        name: "Sarah Williams",
-        business: "Consulting"
+        content: "From start to finish, the team was extremely professional and proactive. I'd recommend them to anyone starting a business.",
+        name: "Tanya Bajaj",
+        business: "Top-Notch Service",
+        stars: 5
     },
     {
-        content: "I got my GST registered with TaxSlick, and it was so simple! The team guided me every step of the way.",
-        name: "Alex Brown",
-        business: "Tech Startup"
+        content: "They provided premium-quality service at a very reasonable price. Definitely worth every penny!",
+        name: "Aryan Khanna",
+        business: "Value for Money",
+        stars: 5
     },
     {
-        content: "I got my GST registered with TaxSlick, and it was so simple! The team guided me every step of the way.",
-        name: "Emily Davis",
-        business: "Healthcare"
+        content: "The team made private limited company registration stress-free and straightforward. Kudos to their excellent service!",
+        name: "Kiara Bhatia",
+        business: "Stress-Free Registration",
+        stars: 5
+    },
+    {
+        content: "I am delighted with their service. They ensured timely completion and kept me informed throughout.",
+        name: "Ved Deshpande",
+        business: "Highly Satisfied!",
+        stars: 5
     }
 ];
 
@@ -64,7 +76,7 @@ const Reviews = () => {
     };
 
     const ReviewCard = ({ review }) => (
-        <div className="px-4">
+        <div className="px-4" id='testimonials'>
             <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
                 {/* Quote Icon - Updated with green accent */}
                 <div className="mb-4 flex items-center">
@@ -83,7 +95,10 @@ const Reviews = () => {
                 {/* Review Content - Added subtle green highlight */}
                 <p className="text-gray-600 mb-6 italic">
                     "{review.content}"
-                    <span className="block mt-2 text-emerald-600 text-sm font-medium">★★★★★</span>
+                    <span className="block mt-2 text-emerald-600 text-sm font-medium">
+                        {[...Array(review.stars)].map((_, i) => '★').join('')}
+                        {[...Array(5 - review.stars)].map((_, i) => '☆').join('')}
+                    </span>
                 </p>
                 
                 {/* Author Info */}

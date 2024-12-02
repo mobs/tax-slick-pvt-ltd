@@ -76,8 +76,8 @@ const Terms = () => {
           </p>
           <div className="flex items-center gap-2 text-[#4059AC]">
             <span>Email:</span>
-            <a href="mailto:marketingteam.taxslick@gmail.com" className="hover:underline">
-              marketingteam.taxslick@gmail.com
+            <a href="mailto:sales@taxslick.com" className="hover:underline">
+              sales@taxslick.com
             </a>
           </div>
         </section>

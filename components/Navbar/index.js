@@ -5,7 +5,7 @@ import { RxCross1, RxHamburgerMenu } from 'react-icons/rx';
 import SidebarComponent from '../Sidebar';
 import { navbarData } from '@/utils/constants';
 import ModalComponent from '../Modal';
-import { IoMdArrowForward } from 'react-icons/io';
+import { IoMdArrowForward, IoMdCall } from 'react-icons/io';
 
 const Navbar = () => {
     const [sidebar, setSidebar] = useState(false);
@@ -39,7 +39,7 @@ const Navbar = () => {
                         to={data.name.toLowerCase()} 
                         smooth={true} 
                         className='text-sm text-slate-700 transition duration-300 hover:text-slate-900  
-                            relative group cursor-pointer text-center'
+                            relative group cursor-pointer text-center font-sans'
                     >
                         {data.name}
                         <span className='absolute left-0 -bottom-1 w-0 h-[2px] bg-[#4059AC] transition-all duration-300 
@@ -49,15 +49,22 @@ const Navbar = () => {
             </div>
 
             <div className='w[200px] flex justify-end'>
-                <button 
-                    onClick={() => setOpenModal(prev => !prev)} 
+                <a 
+                    href="tel:9266159995"
                     className='bg-[#A3B1E0] text-white font-medium rounded-full px-8 py-3 lg:flex h-11 hidden 
                         items-center gap-3 transition-all duration-300 hover:bg-white hover:text-[#4059AC] 
                         hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 hover:scale-105'
                 >
-                    <span className='z-20 relative'>Connect With Us</span>
-                    <IoMdArrowForward className='text-xl z-20 transition-transform group-hover:translate-x-1' />
-                </button>
+                    <span className='z-20 relative'>+91 9266 159 995</span>
+                </a>
+                <a 
+                    href="tel:9266159995"
+                    className='lg:hidden bg-[#A3B1E0] text-white font-medium rounded-full p-3 flex 
+                        items-center gap-3 transition-all duration-300 hover:bg-white hover:text-[#4059AC] 
+                        hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 hover:scale-105'
+                >
+                    <IoMdCall className='text-xl' />
+                </a>
             </div>
 
             <button 
@@ -71,7 +78,7 @@ const Navbar = () => {
 
             <div className={`fixed top-16 right-0 w-full transform transition-transform duration-300 ease-in-out
                 ${sidebar ? 'translate-x-0' : 'translate-x-full'}`}>
-              <SidebarComponent />
+              <SidebarComponent sidebar={sidebar} setSidebar={setSidebar} />
             </div>
 
             {openModal && <ModalComponent openModal={openModal} setOpenModal={setOpenModal} />}

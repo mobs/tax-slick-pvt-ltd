@@ -1,9 +1,14 @@
+'use client'
+import React,{ useState } from "react";
 import { IoDocumentTextOutline } from "react-icons/io5";
 import { MdOutlineSpeed } from "react-icons/md";
 import { TbPigMoney } from "react-icons/tb";
 import { FaUserTie } from "react-icons/fa";
+import ModalComponent from "../Modal";
 
 const Support = () => {
+    const [modalOpen, setModalOpen] = useState(false);
+
     return (
         <section id="support" className="py-12 md:py-20 px-4 md:px-12 bg-gradient-to-br from-[#A3B1E0]/20 to-white">
             <div className="container mx-auto px-2 md:px-4">
@@ -82,11 +87,14 @@ const Support = () => {
                     </h3>
                     <button className="bg-[#4059AC] text-white px-8 py-4 rounded-full font-medium 
                         hover:bg-[#A3B1E0] transition-all duration-300 hover:shadow-lg 
-                        hover:-translate-y-1 active:translate-y-0">
-                        Sign Up Now
+                        hover:-translate-y-1 active:translate-y-0" onClick={() => setModalOpen(true)}>
+                        Connect With Us
                     </button>
                 </div>
             </div>
+            {
+                modalOpen && <ModalComponent openModal={modalOpen} setOpenModal={setModalOpen} />
+            }
         </section>
     )
 }

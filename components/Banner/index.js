@@ -32,7 +32,7 @@ const Banner = () => {
               </h2>
             </div>
 
-            <div className="relative h-[280px] lg:h-[400px] transition-transform hover:scale-[1.02] duration-500">
+            <div className="relative h-[280px] lg:h-[600px] transition-transform hover:scale-[1.02] duration-500">
               <Image
                 src="/banner.png"
                 alt="Business Illustration"

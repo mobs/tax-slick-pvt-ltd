@@ -4,8 +4,12 @@ import Link from "next/link";
 import { IoMdArrowForward } from "react-icons/io";
 import { FaRegCopyright, FaPhoneAlt } from "react-icons/fa";
 import { MdEmail, MdVerified } from "react-icons/md";
+import { HiOutlineOfficeBuilding } from "react-icons/hi";
+import { useState } from "react";
+import ModalComponent from "../Modal";
 
 const Footer = () => {
+  const [modalOpen, setModalOpen] = useState(false);
   const year = new Date().getFullYear();
   
   return (
@@ -27,14 +31,18 @@ const Footer = () => {
           </div>
 
           <div className="flex flex-col gap-2">
-            <a href="tel:+918260008585" className="flex items-center gap-2 text-slate-600 hover:text-[#4059AC] transition-colors">
+            <a href="tel:+919266159995" className="flex items-center gap-2 text-slate-600 hover:text-[#4059AC] transition-colors">
               <FaPhoneAlt size={14} />
-              <span>+91 82600 08585</span>
+              <span>+91 92661 59995</span>
             </a>
-            <a href="mailto:marketingteam.taxslick@gmail.com" className="flex items-center gap-2 text-slate-600 hover:text-[#4059AC] transition-colors">
+            <a href="mailto:sales@taxslick.com" className="flex items-center gap-2 text-slate-600 hover:text-[#4059AC] transition-colors">
               <MdEmail size={16} />
-              <span>marketingteam.taxslick@gmail.com</span>
+              <span>sales@taxslick.com</span>
             </a>
+            <div className="flex items-center gap-2 text-slate-600">
+              <HiOutlineOfficeBuilding size={16} />
+              <p className="text-sm">TAXSLICK ADVISORY PRIVATE LIMITED</p>
+            </div>
           </div>
         </div>
 
@@ -43,10 +51,10 @@ const Footer = () => {
           <h3 className="font-semibold text-lg text-slate-800">Our Services</h3>
           <div className="grid gap-4">
             {[
-              { title: 'GST Registration', desc: 'Direct CA consultation' },
-              { title: 'Business Registration', desc: 'Legal expert guidance' },
-              { title: 'Tax Filing', desc: 'Professional assistance' },
-              { title: 'Compliance Services', desc: 'Complete documentation' }
+              { title: 'GST Registration', desc: 'Expert CA assistance' },
+              { title: 'LLP Registration', desc: 'End-to-end setup' },
+              { title: 'GST Return Filing', desc: 'Timely filing with full accuracy' },
+              { title: 'PVT. LTD. Registration', desc: 'Complete company formation' }
             ].map((service, index) => (
               <div key={index} className="group">
                 <Link href={`/${service.title.toLowerCase().replace(' ', '-')}`} 
@@ -75,8 +83,8 @@ const Footer = () => {
             <button className="bg-[#A3B1E0] w-full text-white font-medium rounded-full px-6 py-3 
               flex items-center justify-center gap-2 transition-all duration-300 
               hover:bg-white hover:text-[#4059AC] hover:shadow-lg 
-              hover:-translate-y-0.5 active:translate-y-0 group">
-              <span>Sign Up Now</span>
+              hover:-translate-y-0.5 active:translate-y-0 group" onClick={() => setModalOpen(true)}>
+              <span>Connect With Us</span>
               <IoMdArrowForward className="text-xl transition-transform group-hover:translate-x-1" />
             </button>
 
@@ -84,7 +92,7 @@ const Footer = () => {
               <div className="flex items-center gap-4 text-white/80 text-sm">
                 <div className="flex items-center gap-2">
                   <div className="w-1.5 h-1.5 rounded-full bg-emerald-400"></div>
-                  <span>24/7 Support</span>
+                  <span>Support: Mon-Sat: 10AM - 7PM</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-1.5 h-1.5 rounded-full bg-emerald-400"></div>
@@ -116,13 +124,19 @@ const Footer = () => {
               <Link href="/privacy-policy" className="hover:text-[#4059AC] transition-colors">Privacy Policy</Link>
               <Link href="/disclaimer" className="hover:text-[#4059AC] transition-colors">Disclaimer</Link>
             </div>
-            <div className="flex items-center gap-2 text-sm text-slate-600">
-              <FaRegCopyright />
-              <span>{year} {companyName}. All rights reserved.</span>
+            <div className="flex flex-col gap-1 text-sm text-slate-600">
+              <div className="flex items-center gap-2">
+                <FaRegCopyright />
+                <span>{year} {companyName}. All rights reserved.</span>
+              </div>
+              <span className="text-slate-500">CIN: U74999DL2018PTC333541</span>
             </div>
           </div>
         </div>
       </div>
+      {
+        modalOpen && <ModalComponent setOpenModal={setModalOpen} openModal={modalOpen} />
+      }
     </footer>
   );
 };

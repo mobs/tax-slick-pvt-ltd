@@ -1,9 +1,12 @@
-import React from 'react';
+'use client'
+import React,{ useState } from 'react';
 import { MdOutlineDescription, MdVerifiedUser } from 'react-icons/md';
 import { FaFileContract } from 'react-icons/fa';
 import { IoMdArrowForward } from 'react-icons/io';
+import ModalComponent from '../Modal';
 
 const HowItWorks = () => {
+    const [modalOpen, setModalOpen] = useState(false);
     const steps = [
         {
             icon: <MdOutlineDescription className="text-3xl text-[#4059AC]" />,
@@ -76,12 +79,16 @@ const HowItWorks = () => {
                 <div className="text-center">
                     <button className="bg-[#4059AC] text-white text-sm md:text-base font-medium rounded-full 
                         px-6 md:px-8 py-3 md:py-4 inline-flex items-center gap-2 md:gap-3 transition-all 
-                        duration-300 hover:bg-[#A3B1E0] hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0">
+                        duration-300 hover:bg-[#A3B1E0] hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0" 
+                        onClick={() => setModalOpen(true)} >
                         <span>Start My Company Registration Today!</span>
                         <IoMdArrowForward className="text-lg md:text-xl" />
                     </button>
                 </div>
             </div>
+            {
+                modalOpen && <ModalComponent openModal={modalOpen} setOpenModal={setModalOpen} />
+            }
         </section>
     );
 };
