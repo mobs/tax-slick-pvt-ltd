@@ -54,7 +54,7 @@ const Footer = () => {
               { title: 'GST Registration', desc: 'Expert CA assistance', url: 'https://gst-registration.taxslick.com' },
               { title: 'LLP Registration', desc: 'End-to-end setup', url: 'https://llp-registration.taxslick.com' },
               { title: 'GST Return Filing', desc: 'Timely filing with full accuracy', url: 'https://gst-return.taxslick.com' },
-              { title: 'PVT. LTD. Registration', desc: 'Complete company formation', url: 'https://pvt-ltd-registration.taxslick.com' }
+              { title: 'Trademark Registration', desc: 'Expert Assistance', url: 'https://trademark-registration.taxslick.com' }
             ].map((service, index) => (
               <div key={index} className="group">
                 <Link href={service.url} target="_blank"
