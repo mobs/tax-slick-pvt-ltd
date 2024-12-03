@@ -99,7 +99,7 @@ const FAQ = () => {
     const [openIndex, setOpenIndex] = useState(-1)
 
     return (
-        <section className="py-20 md:px-8 px-2 bg-gradient-to-b from-[#F5F7FF] to-[#f0fdf4]">
+        <section className="py-20 md:px-8 px-2 bg-gradient-to-b from-[#F5F7FF] to-[#f0fdf4]" id="faqs">
             <div className="max-w-4xl mx-auto">
                 <div className="text-center mb-12">
                     <h2 className="text-4xl font-bold text-[#4059AC] mb-4 flex items-center justify-center gap-3">

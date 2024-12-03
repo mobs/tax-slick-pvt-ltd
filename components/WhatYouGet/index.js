@@ -61,7 +61,7 @@ const WhatYouGet = () => {
     ];
 
     return (
-        <div id="whatyouget" className="py-12 sm:py-20 px-4 sm:px-8 bg-gradient-to-b from-yellow-50/50 to-green-50/50">
+        <div id="what you get" className="py-12 sm:py-20 px-4 sm:px-8 bg-gradient-to-b from-yellow-50/50 to-green-50/50">
             <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-10 sm:mb-16">
                     <h2 className="text-3xl sm:text-4xl font-bold text-slate-800 mb-4 sm:mb-6">

@@ -4,7 +4,7 @@ import Form from '../Form';
 
 const Banner = () => {
   return (
-    <div className="relative min-h-screen bg-gradient-to-br from-green-50 via-yellow-50 to-white">
+    <div className="relative min-h-screen bg-gradient-to-br from-green-50 via-yellow-50 to-white" id="home">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Column: Main Heading + Form */}

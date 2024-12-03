@@ -51,13 +51,13 @@ const Footer = () => {
           <h3 className="font-semibold text-lg text-slate-800">Our Services</h3>
           <div className="grid gap-4">
             {[
-              { title: 'GST Registration', desc: 'Expert CA assistance' },
-              { title: 'LLP Registration', desc: 'End-to-end setup' },
-              { title: 'GST Return Filing', desc: 'Timely filing with full accuracy' },
-              { title: 'PVT. LTD. Registration', desc: 'Complete company formation' }
+              { title: 'GST Registration', desc: 'Expert CA assistance', url: 'https://gst-registration.taxslick.com' },
+              { title: 'LLP Registration', desc: 'End-to-end setup', url: 'https://llp-registration.taxslick.com' },
+              { title: 'GST Return Filing', desc: 'Timely filing with full accuracy', url: 'https://gst-return.taxslick.com' },
+              { title: 'PVT. LTD. Registration', desc: 'Complete company formation', url: 'https://pvt-ltd-registration.taxslick.com' }
             ].map((service, index) => (
               <div key={index} className="group">
-                <Link href={`/${service.title.toLowerCase().replace(' ', '-')}`} 
+                <Link href={service.url} target="_blank"
                   className="flex flex-col text-slate-600 hover:text-[#4059AC] transition-colors">
                   <span className="font-medium">{service.title}</span>
                   <span className="text-sm text-slate-500 group-hover:text-[#4059AC]/70">{service.desc}</span>

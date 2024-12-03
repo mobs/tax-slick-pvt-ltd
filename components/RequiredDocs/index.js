@@ -58,7 +58,7 @@ const RequiredDocs = () => {
     ]
 
     return (
-        <div id="documents" className="py-12 md:py-20 px-4 md:px-8 lg:px-16 bg-slate-50">
+        <div id="documents required" className="py-12 md:py-20 px-4 md:px-8 lg:px-16 bg-slate-50">
             <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-10 md:mb-16">
                     <span className="text-[#4059AC] font-medium mb-2 block">Documentation Guide</span>

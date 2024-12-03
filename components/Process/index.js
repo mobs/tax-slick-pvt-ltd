@@ -55,7 +55,7 @@ const Process = () => {
     ];
 
     return (
-        <section id="process" className="py-8 px-4 md:py-12 md:px-8">
+        <section id="registration process" className="py-8 px-4 md:py-12 md:px-8">
             <div className="max-w-6xl mx-auto">
                 <div className="text-center mb-8 md:mb-10">
                     <h2 className="text-2xl md:text-4xl font-bold text-slate-800 mb-2 md:mb-3">
