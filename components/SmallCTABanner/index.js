@@ -15,7 +15,7 @@ const SmallCTABanner = () => {
           <div className="flex items-center gap-2">
             <MdVerified className="text-emerald-400 text-xl" />
             <p className="text-white text-sm sm:text-base font-medium whitespace-normal sm:whitespace-nowrap text-center">
-              Book a <p className='text-emerald-300 inline'>FREE</p> 5 min call with Legal Experts/Lawyers
+              Book a <p className='text-emerald-300 inline'>FREE</p> 5 min call with CA/CS and Legal Experts 
             </p>
           </div>
 

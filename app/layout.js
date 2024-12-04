@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "Tax Slick | A Tax Advisory Firm | Private Limited Company Registration",
+  title: "Tax Slick | Private Limited Company Registration | Expert CA Assistance | Legal Experts",
   description: "",
   icons: {
     icon: [

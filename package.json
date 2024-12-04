@@ -2,7 +2,7 @@
   "name": "taxslick-private-company-registration",
   "version": "0.1.0",
   "private": true,
-  "author": "Mobashir Alam",
+  "author": "Mobashir Alam(github.com/mobs, mobashira3@gmail.com)",
   "scripts": {
     "dev": "next dev -p 5173",
     "build": "next build",

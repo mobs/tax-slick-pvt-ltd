@@ -17,7 +17,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Company Info with Professional Support USP */}
         <div className="flex flex-col gap-4">
-          <img src="/logo.png" alt="Logo" className="h-12 max-w-[200px]" />
+          <img src="/logo.png" alt="Logo" className="h-12 max-w-[180px]" />
           
           {/* Professional Support Highlight */}
           <div className="bg-green-50 p-4 rounded-lg border border-green-100">
@@ -41,7 +41,7 @@ const Footer = () => {
             </a>
             <div className="flex items-center gap-2 text-slate-600">
               <HiOutlineOfficeBuilding size={16} />
-              <p className="text-sm">TAXSLICK ADVISORY PRIVATE LIMITED</p>
+              <p className="text-sm">DLF Towers, DSM-725, Shivaji Marg, Moti Nagar, New Delhi-110015</p>
             </div>
           </div>
         </div>
