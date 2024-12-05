@@ -1,3 +1,4 @@
+import GTMService from '@/services/GTMService';
 import { useRouter } from 'next/navigation';
 import React, { useState } from 'react'
 
@@ -71,6 +72,12 @@ const Form = () => {
     }
 
     setIsSubmitting(true);
+    let gtmEventData = {
+      fullname: formData.fullname,
+      email: formData.email,
+      phonenumber: formData.phonenumber,
+      pageUrl: window.location.href
+    }
     
     try {
       const response = await fetch('/api/submit', {
@@ -84,7 +91,7 @@ const Form = () => {
       if (!response.ok) {
         throw new Error('Submission failed');
       }
-
+      GTMService.triggerEvent("submit_lead_form", gtmEventData);
       // Reset form after successful submission
       setFormData({ fullname: '', email: '', phonenumber: '' });
       router.push('/thank-you');

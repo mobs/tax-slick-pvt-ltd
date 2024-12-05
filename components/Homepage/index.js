@@ -12,6 +12,7 @@ import Process from '../Process'
 import WhatYouGet from '../WhatYouGet'
 import SmallCTABanner from '../SmallCTABanner'
 import { FaWhatsapp } from 'react-icons/fa'
+import RouteHandler from '../RouteHandler'
 
 const Homepage = () => {
   return (
@@ -40,6 +41,7 @@ const Homepage = () => {
       >
         <FaWhatsapp className="text-2xl" />
       </a>
+      <RouteHandler eventName="page_viewed" />
     </div>
   )
 }
