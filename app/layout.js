@@ -40,7 +40,7 @@ export default function RootLayout({ children }) {
           <Footer />
         </div>
       </body>
-      <GoogleTagManager gtmId="GTM-" />
+      <GoogleTagManager gtmId="GTM-T4GF7K6V" />
     </html>
   );
 }
