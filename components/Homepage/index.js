@@ -27,7 +27,7 @@ const Homepage = () => {
       <WhatYouGet />
       {/* <ForWho /> */}
       
-      <Reviews />
+      {/* <Reviews /> */}
       <CTABanner />
       
       <FAQ />
